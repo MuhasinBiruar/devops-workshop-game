@@ -167,7 +167,7 @@ function App() {
             background: 'linear-gradient(180deg, #FFE100 0%, #EF4444 100%)',
           }}
         >
-          Start Game
+          Yuji Azuhata
         </button>
       ) : (
         <button

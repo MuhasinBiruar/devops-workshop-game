@@ -125,7 +125,7 @@ function App() {
                 onClick={() => handleChoice(choice.id)}
                 disabled={isAnimating || !isPlaying}
                 className={`w-16 h-16 md:w-20 md:h-20 rounded-full border-[4px] md:border-[5px] border-black flex items-center justify-center transition-transform ${isPlaying && !isAnimating ? 'hover:scale-110 active:scale-95 cursor-pointer' : 'opacity-50 cursor-not-allowed'}`}
-                style={{ background: 'linear-gradient(180deg, #FFE100 0%, #FF8C00 100%)' }}
+                style={{ background: 'linear-gradient(180deg, #FFE100 0%, #EF4444 100%)' }}
               >
                 <Icon className="w-8 h-8 md:w-10 md:h-10 text-white" strokeWidth={2.5} size={40} />
               </button>

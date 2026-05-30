@@ -10,11 +10,11 @@ const getAssetUrl = (localAsset, filename) => {
 };
 
 const HandScissorsIcon = ({ className, size = 40 }) => (
-  <img 
-    src={getAssetUrl(customScissorsIcon, 'scissors-hand.svg')} 
-    className={className} 
-    style={{ width: size, height: size, objectFit: 'contain', filter: 'brightness(0) invert(1)' }} 
-    alt="Scissors Hand Sign" 
+  <img
+    src={getAssetUrl(customScissorsIcon, 'scissors-hand.svg')}
+    className={className}
+    style={{ width: size, height: size, objectFit: 'contain', filter: 'brightness(0) invert(1)' }}
+    alt="Scissors Hand Sign"
   />
 );
 
@@ -28,7 +28,7 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [playerScore, setPlayerScore] = useState(0);
   const [computerScore, setComputerScore] = useState(0);
-  
+
   const [playerChoice, setPlayerChoice] = useState(null);
   const [computerChoice, setComputerChoice] = useState(null);
   const [result, setResult] = useState(null);
@@ -64,12 +64,12 @@ function App() {
 
   const handleChoice = (choiceId) => {
     if (isAnimating || !isPlaying) return;
-    
+
     setPlayerChoice(choiceId);
     setIsAnimating(true);
     setComputerChoice(null);
     setResult(null);
-    
+
     let counter = 0;
     const interval = setInterval(() => {
       const randomChoice = CHOICES[Math.floor(Math.random() * CHOICES.length)].id;
@@ -81,10 +81,10 @@ function App() {
         setComputerChoice(finalComputerChoice);
         const matchResult = determineWinner(choiceId, finalComputerChoice);
         setResult(matchResult);
-        
+
         if (matchResult === 'win') setPlayerScore(p => p + 1);
         if (matchResult === 'lose') setComputerScore(c => c + 1);
-        
+
         setIsAnimating(false);
       }
     }, 100);
@@ -95,10 +95,10 @@ function App() {
   return (
     <div className="min-h-screen bg-white text-black font-karla flex flex-col items-center justify-center py-10 overflow-x-hidden">
       {/* Title */}
-      <h1 
+      <h1
         className="font-jersey font-bold text-center text-5xl md:text-7xl tracking-wider text-stroke-lg mb-8 text-gradient-yellow"
       >
-        Rock Paper Scissors
+        Rock Paper Scissors!
       </h1>
 
       {/* Scores Area */}
@@ -134,7 +134,7 @@ function App() {
         </div>
 
         {/* Battle Arena */}
-        <div 
+        <div
           className="w-full h-[200px] sm:h-[260px] md:h-[350px] border-[5px] md:border-[6px] border-black relative overflow-hidden"
           style={{ background: 'linear-gradient(135deg, #4CE7E7 0%, #3D3E80 100%)' }}
         >
@@ -160,17 +160,17 @@ function App() {
 
       {/* Start/Reset Button */}
       {!isPlaying ? (
-        <button 
+        <button
           onClick={startGame}
           className="mt-10 px-10 py-3 border-[4px] md:border-[5px] border-black rounded-2xl font-jersey font-bold text-3xl md:text-4xl hover:scale-105 active:scale-95 transition-transform cursor-pointer shadow-[0_4px_0_0_#000]"
-          style={{ 
+          style={{
             background: 'linear-gradient(180deg, #FFE100 0%, #FF8C00 100%)',
           }}
         >
           Start Game
         </button>
       ) : (
-        <button 
+        <button
           onClick={resetGame}
           className="mt-10 px-10 py-3 border-[4px] md:border-[5px] border-black rounded-2xl font-jersey font-bold text-3xl md:text-4xl hover:scale-105 active:scale-95 transition-transform cursor-pointer shadow-[0_4px_0_0_#000] bg-white text-black"
         >

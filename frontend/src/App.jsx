@@ -104,7 +104,7 @@ function App() {
       {/* Scores Area */}
       <div className="w-full max-w-[500px] md:max-w-[700px] flex justify-between px-8 mb-2 z-10">
         <div className="text-center font-bold">
-          <div className="text-2xl tracking-wide mb-1">You</div>
+          <div className="text-2xl tracking-wide mb-1">Magnus</div>
           <div className="text-lg font-normal">Score: {playerScore}</div>
         </div>
         <div className="text-center font-bold">

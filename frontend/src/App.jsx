@@ -108,7 +108,7 @@ function App() {
           <div className="text-lg font-normal">Score: {playerScore}</div>
         </div>
         <div className="text-center font-bold">
-          <div className="text-2xl tracking-wide mb-1">Computah</div>
+          <div className="text-2xl tracking-wide mb-1">Yuji AIzuahata</div>
           <div className="text-lg font-normal">Score: {computerScore}</div>
         </div>
       </div>

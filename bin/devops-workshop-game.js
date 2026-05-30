@@ -9,7 +9,7 @@ new DevopsWorkshopGameStack(app, 'DevopsWorkshopGameStack', {
   /* If you don't specify this, CDK might default to us-east-1 
      and fail to find your secret! */
   env: {
-    account: '645975910829', // Your AWS Account ID from the ARN
+    account: '249449766492', // Your AWS Account ID from the ARN
     region: 'ap-southeast-1'  // The region where you created the secret
   },
 });

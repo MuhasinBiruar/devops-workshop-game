@@ -164,7 +164,7 @@ function App() {
           onClick={startGame}
           className="mt-10 px-10 py-3 border-[4px] md:border-[5px] border-black rounded-2xl font-jersey font-bold text-3xl md:text-4xl hover:scale-105 active:scale-95 transition-transform cursor-pointer shadow-[0_4px_0_0_#000]"
           style={{
-            background: 'linear-gradient(180deg, #FFE100 0%, #FF8C00 100%)',
+            background: 'linear-gradient(180deg, #FFE100 0%, #EF4444 100%)',
           }}
         >
           Start Game
@@ -172,7 +172,7 @@ function App() {
       ) : (
         <button
           onClick={resetGame}
-          className="mt-10 px-10 py-3 border-[4px] md:border-[5px] border-black rounded-2xl font-jersey font-bold text-3xl md:text-4xl hover:scale-105 active:scale-95 transition-transform cursor-pointer shadow-[0_4px_0_0_#000] bg-white text-black"
+          className="mt-10 px-10 py-3 border-[4px] md:border-[5px] border-black rounded-2xl font-jersey font-bold text-3xl md:text-4xl hover:scale-105 active:scale-95 transition-transform cursor-pointer shadow-[0_4px_0_0_#000] bg-white text-blue-500"
         >
           Reset Game
         </button>
